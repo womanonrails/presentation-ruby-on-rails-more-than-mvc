@@ -1,6 +1,6 @@
 class: center, middle, inverse
 
-# Ruby on Rails - more then MVC
+# Ruby on Rails - more than MVC
 Agnieszka Matysek
 
 ---
