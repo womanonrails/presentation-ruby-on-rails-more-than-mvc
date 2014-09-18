@@ -152,7 +152,7 @@ class: middle
 
 class: center, middle
 
-![Jurassic Park](/images/jurassic-park.jpg)
+![Jurassic Park](./images/jurassic-park.jpg)
 
 ---
 
@@ -410,7 +410,7 @@ Ruby on Rails
 
 class: center, middle
 
-![Apollo 13](/images/apollo13.jpg)
+![Apollo 13](./images/apollo13.jpg)
 
 ---
 
