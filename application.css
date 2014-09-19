@@ -31,10 +31,27 @@ a {
   font-weight: 700;
 }
 
-img {
+.large-image img {
   width: 750px;
+}
+
+.small-image img {
+  width: 400px;
 }
 
 .italic {
   font-style: italic;
+}
+
+.left-column {
+  width: 30%;
+  height: 92%;
+  float: left;
+  padding-top: 15%;
+}
+
+.right-column {
+  width: 65%;
+  float: right;
+  padding-top: 13%;
 }

@@ -75,7 +75,17 @@ class: center, middle, inverse
 
 class: middle
 
+.left-column[
 # M - Model
+### V - View
+### C - Controller
+]
+
+.right-column[
+  .right[
+    ![model](./images/model.jpg)
+  ]
+]
 
 ???
 
@@ -88,12 +98,22 @@ class: middle
 
 class: middle
 
+.left-column[
+### M - Model
 # V - View
+### C - Controller
+]
+
+.right-column[
+  .right[
+    ![view](./images/view.jpg)
+  ]
+]
 
 ???
 
 - dom lub cała karoseria (to jak samochód wygląda)
-- logika aplikacji
+- wygląd aplikacji
 - wyświetla dane w jakimś konkretnym formacie
 - mówi jak je wyświetlić (html, xml, json)
 
@@ -101,7 +121,17 @@ class: middle
 
 class: middle
 
+.left-column[
+### M - Model
+### V - View
 # C - Controller
+]
+
+.right-column[
+  .right[
+    ![controller](./images/controller.jpg)
+  ]
+]
 
 ???
 
@@ -113,7 +143,7 @@ class: middle
 
 class: center, middle, inverse
 
-# Advantage & Disadvantage
+# Advantages & Disadvantages
 
 ???
 
@@ -133,9 +163,11 @@ class: center, middle, inverse
 
 ---
 
-class: middle
+class: middle, center
 
 # Fat Model, Skinny Controller
+
+.small-image[![model & controller](./images/fat-model-skinny-controller.jpg)]
 
 ???
 
@@ -205,11 +237,14 @@ class: center, middle, inverse
 
 ---
 
-class: middle
+class: middle, center
 
 # Model - Adapter pattern
 
 ActiveRecord (ORM - Object-Relational Mapping)
+
+![Adapter](./images/adapter.jpg)
+
 
 ???
 
@@ -225,7 +260,7 @@ ActiveRecord (ORM - Object-Relational Mapping)
 
 ---
 
-class: middle
+class: middle, center
 
 # Model - Command pattern
 
@@ -249,11 +284,14 @@ ActiveRecord (Migrations)
 
 ---
 
-class: middle
+class: middle, center
 
 # Model - Observer pattern
 
 ActiveRecord (Callbacks)
+
+![Observer](./images/observer.jpg)
+
 
 ???
 
@@ -264,7 +302,7 @@ ActiveRecord (Callbacks)
 
 ---
 
-class: middle
+class: middle, center
 
 # Model - Factory method pattern
 
@@ -282,11 +320,13 @@ ActiveRecord (ORM - Object-Relational Mapping)
 
 ---
 
-class: middle
+class: middle, center
 
 # Model - Builder pattern
 
 ActiveRecord (find_by methods)
+
+![Builder](./images/builder.jpg)
 
 ???
 
@@ -303,11 +343,13 @@ ActiveRecord (find_by methods)
 
 ---
 
-class: middle
+class: middle, center
 
 # ActiveSupport - Decorator pattern
 
 alias_method_chain
+
+![Decorator](./images/decorator.jpg)
 
 ???
 
@@ -327,7 +369,7 @@ alias_method_chain
 
 ---
 
-class: middle
+class: middle, center
 
 # ActiveSupport - Singleton pattern
 
@@ -347,11 +389,13 @@ Inflections
 
 ---
 
-class: middle
+class: middle, center
 
 # Controller - Strategy pattern
 
 render (HTML, XML, json, ...)
+
+![Strategy](./images/strategy.jpg)
 
 ???
 
@@ -362,7 +406,7 @@ render (HTML, XML, json, ...)
 
 ---
 
-class: middle
+class: middle, center
 
 # Model - Meta-programming
 
@@ -382,7 +426,7 @@ attr_accessor, attr_reader, attr_writer
 
 ---
 
-class: middle
+class: middle, center
 
 # Convention Over Configuration
 
@@ -410,7 +454,7 @@ Ruby on Rails
 
 class: center, middle
 
-![Apollo 13](./images/apollo13.jpg)
+.large-image[![Apollo 13](./images/apollo13.jpg)]
 
 ---
 
@@ -430,12 +474,11 @@ class: center, middle, inverse
 
 ---
 
-class: middle
+class: middle, center
 
 # Generators
 
-.italic[assets, controller, decorator, generator, helper, integration_test, jbuilder,
-mail_form, mailer, migration, model, resource, scaffold, scaffold_controller, task, ...]
+.italic[assets, controller, decorator, helper, mailer, migration, model, resource, scaffold, scaffold_controller, ...]
 
 ???
 
@@ -451,7 +494,7 @@ mail_form, mailer, migration, model, resource, scaffold, scaffold_controller, ta
 
 ---
 
-class: middle
+class: middle, center
 
 # Rake
 
@@ -474,7 +517,7 @@ DSL - Domain-specific language
 
 ---
 
-class: middle
+class: middle, center
 
 # Bundler
 
@@ -489,7 +532,7 @@ a gem to bundle gems
 
 ---
 
-class: middle
+class: middle, center
 
 # Guard
 
@@ -508,9 +551,11 @@ command line tool to easily handle events on file system modifications
 
 ---
 
-class: middle
+class: middle, center
 
-# SASS & Coffee
+# Sass & Coffee Script
+
+.italic[(.strong[S]yntactically .strong[A]wesome .strong[S]tyle.strong[S]heets)]
 
 ???
 
@@ -522,7 +567,7 @@ class: middle
 
 ---
 
-class: middle
+class: middle, center
 
 # Tests
 
@@ -547,10 +592,10 @@ class: middle, inverse
 
 # Summary
 
-- good code is writing through good programmers
+- good code is writing by good programmers
 - code responsibility
 - learn all the time
-- sometimes you do mistake
+- sometimes you make mistake
 - develop your skills
 
 ???
@@ -584,7 +629,7 @@ class: middle, inverse
 - [Baruco 2013: Rules, by Sandi Metz](http://www.youtube.com/watch?v=npOGOmkxuio)
 - [The Pragmatic Programmer: From Journeyman to Master](http://www.amazon.com/exec/obidos/ASIN/020161622X)
 - [Design Patterns in Ruby](http://www.amazon.com/exec/obidos/ASIN/0321490452)
-- [code school](https://www.codeschool.com/)
+- [Code School](https://www.codeschool.com/)
 - [Rails Documentation](http://api.rubyonrails.org/)
 - [Reek](https://github.com/troessner/reek/wiki)
 - [RuboCop](https://github.com/bbatsov/rubocop)
@@ -598,7 +643,7 @@ class: middle, inverse
 
 class: middle, center
 
-# Me
+.small-image[![Womanonrails](./images/womanonrails.png)]
 ### Agnieszka Matysek
 [@womanonrails](https://twitter.com/womanonrails)
 
