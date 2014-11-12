@@ -68,7 +68,7 @@ class: center, middle, inverse
 
 - pierwsza rzecz, najbardziej rzucająca się w oczy
 - co to jest MVC?
-- wzorzec projektowy (architektoniczny) - sprawdzony sposób, przepis na rozwiązanie konkretnego problemu (wiązanego z architekturą oprogramowania)
+- .strong[wzorzec projektowy (architektoniczny)] - sprawdzony sposób, przepis na rozwiązanie konkretnego problemu (wiązanego z architekturą oprogramowania)
 - służy do organizowania, porządkowania struktury aplikacji z interfejsem graficznym
 
 ---
@@ -263,8 +263,10 @@ ActiveRecord (ORM - Object-Relational Mapping)
 class: middle, center
 
 # Model - Command pattern
-
 ActiveRecord (Migrations)
+
+![Command](./images/command.jpg)
+
 
 ???
 
@@ -278,7 +280,7 @@ ActiveRecord (Migrations)
 - możliwość modyfikacji wersji bazy danych
 - to program wie w jakiej wersji ma bazę, sam dba o to by mieć najnowszą wersję
 - automatyzacja powtarzających się procesów
-- możliwość dodawania, usuwania, mieniania elementów bazy danych
+- możliwość dodawania, usuwania, zmieniania elementów bazy danych
 - ułatwia współpracę nad projektem każdy wie że coś się zmieniło w bazie, ma kod który mu to zrobi
 - nie trzeba gmerać w bazie danych
 
@@ -299,24 +301,6 @@ ActiveRecord (Callbacks)
 - .strong[Observer] - używany do powiadamiania zainteresowanych obiektów o zmianie stanu innego obiektu
 - .strong[Korzyści:]
 - niezależność, ograniczenie związków miedzy modelami (klasami)
-
----
-
-class: middle, center
-
-# Model - Factory method pattern
-
-ActiveRecord (ORM - Object-Relational Mapping)
-
-???
-
-- dostarcza uniwersalną klasę bazową, która sama nie podejmuje decyzji co do tworzonych obiektów (dostarcza tylko interfejs) o sposobie tworzenia decydują podklasy
-- przykład obsługa wielu formatów plików graficznych
-- .strong[Active Record] po jednej klasie dla każdego adaptera dla każdej bazy danych
-- czy zastanawialiście się kto i w jaki sposób zarządza wieloma adapterami?
-- .strong[Korzyści:]
-- sam zarządza który adapter wybrać
-- uniezależnienie kodu
 
 ---
 
@@ -367,27 +351,7 @@ alias_method_chain
 - .strong[Wady:]
 - trzeba to ostrożnie używać
 
----
-
-class: middle, center
-
-# ActiveSupport - Singleton pattern
-
-Inflections
-
-???
-
-- ogranicza możliwość tworzenia obiektów danej klasy
-- tylko jeden obiekt danej klasy, dostęp globalny
-- .strong[ActiveSupport] - klasy pomocnicze
-- reguły dotyczące tworzenia liczby mnogiej - muszą być tylko raz nie trzeba wielu obiektów
-- wykorzystywany tez w Rake - jeden obiekt Rake::Application
-- Porównanie do piły - trzeba uważać gdzie i dlaczego to się robi
-- uważany czasem za anty wzorzec bo łamie zasady projektowania obiektowego
-- często nadużywany lub źle zaimplementowany (nie zrozumiany)
-- w Ruby istnieje moduł pomagający stworzyć singleton - .strong[Singleton]
-
----
+ ---
 
 class: middle, center
 
@@ -458,124 +422,60 @@ class: center, middle
 
 ---
 
-class: center, middle, inverse
+class: middle, inverse
 
 # Other tools
+
+- Generators
+- Rake
+- Bundler
+- Guard
+- Sass & Coffee Script
+- Tests
+
 
 ???
 
 - narzędzia, które ułatwiają nam kodzenie
 - robią pewne rzeczy za nas
-- jak łatwo uruchomić serwer?
-- jak zadbać o tą sama wersje środowiska na różnych maszynach?
-- jak rozwiązać zależności miedzy dodatkami?
-- co nam ułatwia pracę?
-- itd.
 
----
 
-class: middle, center
-
-# Generators
-
-.italic[assets, controller, decorator, helper, mailer, migration, model, resource, scaffold, scaffold_controller, ...]
-
-???
-
-- .strong[Korzyści:]
+- .strong[Generatory]
 - budują szablony kodu
 - cała obsługa CRUD (Create, Read, Update, Delete)
 - pokazują schemat poruszania się po aplikacji (umieszczenia kodu w dobrym miejscu)
-- automatyzują
-- przyśpiesza pisanie kodu
-- .strong[Wady:]
-- gdy nie jesteśmy zapoznani ze specyfiką działania Rails to może nam się wydawać, że .strong[kod jest poza naszą kontrolą]
-- może to być dla nas voodoo
+- automatyzują, przyśpiesza pisanie kodu
 
----
 
-class: middle, center
-
-# Rake
-
-DSL - Domain-specific language
-
-???
-
-- .strong[DSL] - język dziedzinowy, dedykowany
-- przystosowany do określonej dziedziny problemów, do potrzeb
-- dostosowuje używany język do naszych potrzeb
-- czasem użytkownik nawet nie wie, że pracuje w danym języku (jest to przed nim ukryte)
-- jest to pewien podzbiór języka głównego
-- SQL, język wyrażeń regularnych
 - .strong[Rake] - odpowiednik narzędzi .strong[make] lub .strong[ant]
 - automatyzuje proces kompilacji programów w języku Ruby
 - pozwala zarządzać zadaniami, zasobami, bazą danych
-- .strong[Korzyści:]
-- oddziela zewnętrzne polecenia od samej aplikacji
-- cały czas operujemy w obrębie jednego języka
 
----
 
-class: middle, center
-
-# Bundler
-
-a gem to bundle gems
-
-???
-
+- .strong[Bundler]
 - upewnia się że aplikacja Ruby uruchamia te same środowisko na każdej maszynie
-- .strong[gem] - czyli biblioteka
 - zarządza wersjami gemów (innych dodatków)
 - rozwiązuje zależności między nimi
 
----
 
-class: middle, center
-
-# Guard
-
-command line tool to easily handle events on file system modifications
-
-???
-
+- .strong[Guard]
 - narzędzie konsolowe, pozwalające wywoływać zdarzenia na modyfikowanych plikach
 - uruchamianie, przeładowywanie serwera po zmianie plików konfiguracyjnych
 - przeładowywanie przeglądarki po zmianie css, js, html
 - doinstalowywanie gemów
 - uruchamianie testów po zapisie zmian w plikach
-- .strong[Korzyści:]
-- automatyzuje żmudne prace
-- pozwala na szybsza pracę
 
----
 
-class: middle, center
-
-# Sass & Coffee Script
-
-.italic[(.strong[S]yntactically .strong[A]wesome .strong[S]tyle.strong[S]heets)]
-
-???
-
+- .strong[Sass & Coffee Script]
 - ułatwiają pisanie css i js
 - przydatne dla programistów z mała świadomością js (bezpieczny dla nich)
 - wprowadzanie metod (mixins), zmiennych, zagnieżdżeń do css
 - zapamiętywanie kolorów i powtarzających się stylów
 - coffee podobnie się pisze jak Ruby
 
----
 
-class: middle, center
-
-# Tests
-
-Test::Unit & RSpec
-
-???
-
-- ogromny temat, na wiele prezentacji
+- .strong[Testy]
+- ogromny temat
 - .strong[Unit Test] moduł w Ruby, dołączane do Rails
 - .strong[RSpec] dodatkowy gem, z bardzo przyjemną składnią (jakby się pisało w języku angielskim)
 - same Ralsy zapraszają nas do testowania to dlaczego tego nie robić?
