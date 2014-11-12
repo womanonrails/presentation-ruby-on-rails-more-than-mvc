@@ -263,8 +263,10 @@ ActiveRecord (ORM - Object-Relational Mapping)
 class: middle, center
 
 # Model - Command pattern
-
 ActiveRecord (Migrations)
+
+![Command](./images/command.jpg)
+
 
 ???
 
